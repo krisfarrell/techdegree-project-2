@@ -1,71 +1,244 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
 
-/*LAYOUT*/
+* {
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #dff7f7;
+    color: black;
     text-align: center;
-    background: #edf4ff;
-    color: #7c8aa1;
-}
-
-.title {
-    padding: 20px;
-}
-
-p{
-    padding-bottom: 15px;
-}
-
-.container {
-    padding: 20px;
-}
-
-.main-container {
-    background: white;
-    padding: 20px;
+    font-family: 'Robot', sans-serif;
 }
 
 img {
-    max-width: 100%;
+    max-width: 90%;
 }
 
-/*NAVIGATION*/
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 10px;
-    margin-bottom: 10px;
-    background: white;
-}
+/* ---- Navigation ---- */
 
 a {
-    color: darkslategray;
+    color: black;
     text-decoration: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    width: 100%;
+    display: block;
 }
 
 a:hover {
-    color: #6ea5ff;
+    color: steelblue;
 }
 
-/*FOOTER*/
 
-#back-to-top {
-    display: none;
+/* ================================= 
+  Base Element Styles - Classes
+==================================== */
+
+.profile-pic {
+    max-width: 80%;
 }
 
-#footer-bottom-nav {
+.intro {
+    padding-bottom: 10px;
+}
+
+.title {
+    padding: 1em;
+}
+
+.descrip {
+    padding-bottom: 1.5em;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+    margin: 0;
+}
+
+/* ---- Layout Containers ---- */
+
+.container,
+.main-container {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.main-container {
+    background-color: white;
+    margin: 20px;
+}
+
+.main-header {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 30px;
+}
+
+.main-footer {
     display: inline-block;
+    padding: 2em 1em;
     width: 100%;
 }
 
-/*MEDIA QUERIES*/
-@media screen and (min-width: 768px) {
-    .container, main-container {
-        width: 70%;
+.footer-name {
+    float: left;
+}
+
+#backtotop {
+    float: right;
+}
+
+
+.non-mobile {
+    display: none;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+    /* ================================= 
+  HEADER
+==================================== */
+    .intro {
+        text-align: justify;
     }
-    
+
+    .main-nav,
+    .main-nav li {
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* ================================= 
+  LAYOUT COLUMNS
+==================================== */
+    .col1 {
+        float: left;
+        width: 50%;
+    }
+
+    .col2 {
+        float: right;
+        width: 50%;
+    }
+
+    .col3 {
+        float: right;
+        width: 50%;
+    }
+
+    .col4 {
+        float: left;
+        width: 50%;
+        padding-left: 30px;
+    }
+
+    /* ================================= 
+  FOOTER
+==================================== */
+    .footer-nav li {
+        display: inline-block;
+    }
+
+    .footer-name {
+        float: left;
+        margin-top: 40px;
+    }
+
+    .footer-nav {
+        float: right;
+    }
+
+    #backtotop {
+        display: none;
+    }
+
+    /* ================================= 
+  ELEMENTS
+==================================== */
+
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    /* ================================= 
+  HEADER
+==================================== */
+    .name,
+    .main-nav,
+    .main-nav li,
+    .footer-nav li {
+        display: inline-block;
+    }
+
+    .name {
+        float: left;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    .main-nav {
+        float: right;
+    }
+
+
+
+    /* ================================= 
+  LAYOUT COLUMNS
+==================================== */
+
+    .col1,
+    .col2 {
+        width: 33.3%;
+        float: left;
+    }
+
+    .col3,
+    .col4 {
+        display: inline;
+    }
+
+    /* ================================= 
+FOOTER
+==================================== */
+    .footer-name {
+        float: left;
+        margin-top: 40px;
+    }
+
+    .footer-nav {
+        float: right;
+    }
+
+    #backtotop {
+        display: none;
+    }
+
+    /* ================================= 
+ELEMENTS
+==================================== */
+
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
